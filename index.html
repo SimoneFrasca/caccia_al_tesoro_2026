@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Benvenuti alla Caccia al Tesoro</title>
+    <link rel="stylesheet" href="regolamento.css">
+    <!-- Importazione font per coerenza visiva -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme">
+
+    <div class="container-light" id="regolamento">
+        <h1>Benvenuti alla nuova edizione della caccia al tesoro!</h1>
+        <p class="decorato">
+            Anche quest’anno i nostri autori si sono sbizzarriti con nuove idee e giochi coinvolgenti. Ma prima di
+            iniziare, vi chiediamo di leggere attentamente il regolamento. È uno strumento importante per tutti: perché
+            sì, è un gioco… ma anche il gioco ha bisogno delle sue regole.
+        </p>
+
+        <p>Qualche regola semplice:</p>
+
+        <ol style="margin-left: 20px;">
+            <li>
+                <b>Gioco = divertimento</b>, ma anche rispetto. La caccia è prima di tutto un’attività ludica, ma anche
+                un’esperienza sociale. Ci aspettiamo quindi un comportamento corretto: tra compagni di squadra, verso le
+                altre squadre e verso noi organizzatori. Anche se ogni tanto un va******lo ce lo meritiamo... ma
+                contate fino a dieci! Detto questo, ci teniamo molto che il gioco sia pulito e rispettoso.<br>
+                ➤ No a comportamenti scorretti,<br>
+                ➤ No a voci false per screditare gli altri,<br>
+                ➤ No a furbate fuori dallo spirito del gioco,<br>
+                ➤ No a manomettere le prove (tipo staccare fogli o spostare oggetti).
+            </li>
+
+            <li>
+                <b>Il capitano</b>, che avete scelto all'inizio della caccia, sarà l'<b>unica</b> persona della squadra che
+                potrà interfacciarsi con noi.
+                Tutti gli altri dovranno rivolgersi a l*i per qualsiasi comunicazione. Abbiamo creato una chat di
+                gruppo per facilitare la comunicazione tra noi e i capitani per eventuali comunicazioni generali.
+            </li>
+
+            <li>
+                <b>Niente proprietà private.</b> Nessuna prova vi chiederà di entrare in proprietà private. Se lo fate,
+                state sbagliando.
+            </li>
+
+            <li>
+                <b>Chi rompe paga.</b> L’organizzazione non si assume responsabilità per danni a oggetti o persone.
+            </li>
+
+            <li>
+                <b>Se vi fate male...</b> Anche qui, ci dispiace, ma non ci riteniamo responsabili per eventuali
+                infortuni (avete firmato il modulo di scarico responsabilità, vero?). Comunque, le prove sono pensate per essere sicure.
+                Se non fate cose strane, non vi fate male, per l'amor di Dio.
+            </li>
+
+            <li>
+                <b>Avete fatto il pieno?</b> Potete usare per spostarvi qualsiasi mezzo: auto, moto, scooter,
+                bicicletta, monopattino elettrico, nave, aereo, elicottero, Space Shuttle... (e ovviamente le gambe, sfaticati!)
+            </li>
+
+            <li>
+                <b>Si chiama caccia al tesoro...</b> Quindi, se siete in cerca di un indizio, non venite subito a dirci
+                che non lo trovate (altrimenti non si chiamerebbe "caccia"). In tre edizioni non è mai successo che un
+                indizio sia andato perso, perciò aguzzate la vista.
+            </li>
+
+            <li>
+                <b>Leggete attentamente.</b> Comprendiamo la foga nell'essere veloci a superare una prova, però
+                vi diamo questo consiglio spassionato: le prove sono tante, il tempo è tanto, perdere un minuto in
+                più a leggere bene la prova vi permetterà di risparmiare molto tempo.
+            </li>
+
+            <li>
+                <b>Si va digital!</b> Dato che lo smartphone è diventato parte integrante della nostra vita quotidiana
+                (passiamo circa 6 ore al giorno sul telefono, fonte <a href="https://www.corriere.it/tecnologia/25_febbraio_27/gli-italiani-passano-online-quasi-6-ore-al-giorno-l-app-su-cui-trascorriamo-piu-tempo-e-ancora-tiktok-c4ac8534-134c-4005-bf53-c63e249c5xlk.shtml">CORRIERE DELLA SERA</a>) 
+                gran parte della caccia si svolgerà tramite questa piattaforma digitale.
+                Nella prossima pagina vi spiegheremo nel dettaglio come funziona.
+            </li>
+
+            <li>
+                <b>Preferiamo la deficienza umana all'intelligenza artificiale</b>: almeno una volta ognuno di noi
+                ha chiesto a ChatGPT o a Google Gemini come si prepara la carbonara, se i calzini possono essere messi a 
+                30 gradi con i bianchi o qual è meglio tra l'ultimo modello di telefono della Samsung o IPhone. Quindi per oggi evitiamo 
+                di inquinare il nostro pianeta ed evitiamo di interpellare l'intelligenza artificiale.
+            </li>
+        </ol><br>
+        <br><br>
+        <p><b>Buon divertimento, e che vinca il migliore!</b></p>
+
+        <p>
+        *Eventuali riferimenti a personaggi, luoghi ed eventi sono in parte reali e in parte frutto della fantasia
+        degli autori.
+        </p>
+
+        <!-- AREA ACCETTAZIONE -->
+        <div class="checkbox-container" style="margin: 30px 0; padding: 15px; background: #f0f0f0; border-radius: 8px;">
+            <input type="checkbox" id="accetto" onchange="toggleContinua()"> 
+            <label for="accetto" style="cursor: pointer;">Ho letto e accetto il regolamento della caccia al tesoro.</label>
+        </div>
+
+        <button id="btn-continua" onclick="mostraDisclaimer()" style="display: none; padding: 10px 20px;">Continua</button>
+    </div>
+
+
+    <!-- AREA DISCLAIMER / AVVIO -->
+    <div class="container-light" id="disclaimer" style="display:none; text-align: left;">
+        <h1>Funzionamento della piattaforma digitale</h1>
+        <h1>DISCLAIMER: <b>TUTTI</b> I COMPONENTI DELLE SQUADRE POSSONO UTILIZZARE QUESTA PIATTAFORMA DIGITALE!</h1>
+        <p> Come anticipato, gran parte della caccia si svolgerà su questa piattaforma digitale. Di seguito vi spiegheremo
+            come funziona:
+        </p>
+        <ol style="margin-left: 20px;">
+            <li> Ogni pagina corrisponde a una prova da superare. Per superarla bisogna inserire la soluzione
+                nell'apposita casella.
+            </li>
+            <li> <b>LA RISPOSTA CORRETTA È UNA SOLA</b>: come nei quiz televisivi le risposte sono precaricate, quindi
+                se la risposta che inserite non corrisponde con la nostra sarà segnalata come errata.
+            </li>
+            <li> Le risposte sono <i>case-insensitive</i>, ossia non dipendono dal fatto che inseriate una parola con lettere maiuscole o accenti. 
+                Ad esempio: Di quale stato è capitale Lima? Risposta corretta: Perù, ma vanno bene anche PERÙ, perù, Peru, peru...
+            </li>
+            <li> <b>HANDICAP TEMPORALI</b>: in alcuni casi, quando inserite una risposta errata, vi verrà dato un handicap temporale che può variare
+                da pochi secondi a qualche minuto... Quindi siate cauti nell'inserire le risposte e non provate ad andare a tentativi,   perderete
+                solo tempo, perché non potendo inserire nuove risposte non potrete proseguire. Vedete però il lato positivo: avete più tempo per ragionarci su.
+            </li>
+            <li> <b>INDIZI</b>: molte prove non sono di facile risoluzione e dunque, per darvi una mano, vi forniremo degli aiuti. Ma come funziona? Dopo aver 
+                inserito un certo numero di risposte errate, vi verrà fornito un indizio. Non vi verrà detto quanti indizi avrete per una prova e nemmeno 
+                quanti errori potete fare prima di riceverne uno... sta a vostra completa discrezione. Gli indizi sono pensati in modo da arrivare prima 
+                o poi alla soluzione, quindi <b>DA PARTE NOSTRA NON VERRANNO FORNITI INDIZI</b>.<br>
+                Ad esempio:<br>
+                Qual è la capitale della Francia?<br>
+                Tentativo 1. Roma -> <b>ERRATO</b>, aspetta 30 secondi<br>
+                Tentativo 2. Londra -> <b>ERRATO</b>, aspetta 30 secondi<br>
+                Tentativo 3. Berlino -> <b>ERRATO</b>, aspetta 30 secondi<br>
+                Indizio: inizia con la P.<br>
+                Tentativo 4. Parigi -> <b>ESATTO</b><br>
+                Morale: dopo aver inserito 3 risposte errate avete ottenuto un indizio (e perso 1 minuto e 30 secondi).
+            </li>
+            <li> <b>MI SI È SCARICATO IL TELEFONO</b>: Amen, se riuscite a caricarlo bene, altrimenti vi attaccate e dovrete ricominciare da capo a inserire
+                le risposte (per questo consigliamo di annotarle su un foglio). E poi, come detto, <b>TUTTI</b> possono utilizzare questa piattaforma, quindi
+                potete continuare su un altro dispositivo.
+            </li>
+        </ol>
+
+        <p>Detto questo: tutto pronto? La caccia sta per iniziare. Quando tutti sono pronti, inserite il codice di avvio che vi verrà comunicato:</p>
+        <input type="text" id="codice-avvio" placeholder="Codice di sblocco" style="margin: 15px 0; display: block; width: 100%; padding: 10px;">
+        <button onclick="verificaAvvio()">Avvia l'Operazione</button>
+    </div>
+
+    <script>
+        function toggleContinua() {
+            const btn = document.getElementById('btn-continua');
+            btn.style.display = document.getElementById('accetto').checked ? 'block' : 'none';
+        }
+        
+        function mostraDisclaimer() {
+            document.getElementById('regolamento').style.display = 'none';
+            document.getElementById('disclaimer').style.display = 'block';
+        }
+        
+        function verificaAvvio() {
+            const codice = document.getElementById('codice-avvio').value.trim().toLowerCase();
+            if (codice === 'allons-y') {
+                window.location.href = '0_introduzione.html'; // Assicurati di aver rinominato il file nero in login.html
+            } else {
+                alert('Codice errato!');
+            }
+        }
+    </script>
+</body>
+</html>

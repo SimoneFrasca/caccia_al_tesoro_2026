@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operazione Bonaparte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-wrapper">
+
+        <div class="message-bubble">
+            <div class="icon-bubble">💬</div>
+            <div class="bubble-content">
+                <span class="sender">Il professore</span>
+                <span class="message-text">
+                    Dopo aver capito come scappare, abbiamo completato tutti i punti
+                    del piano, ora si va in scena...
+                </span>
+            </div>
+        </div>
+
+        <div class="message-bubble">
+            <div class="icon-bubble">💬</div>
+            <div class="bubble-content">
+                <span class="sender">Il professore</span>
+                <span class="message-text">
+                    Il tesoro è ben conservato e non avrete bisogno di cercare, è sempre
+                    stato di fronte ai vostri occhi... Ma come prenderlo, bè il trucco è nascosto
+                    proprio dentr il vostro cellulare.
+                </span>
+            </div>
+        </div>
+
+        <div class="message-bubble">
+            <div class="icon-bubble">💬</div>
+            <div class="bubble-content">
+                <span class="sender">Il professore</span>
+                <span class="message-text">
+                    Non pensate singolarmente, ma come vi ho detto sempre fin dall'inizio in gruppo. 
+                    Devo dirvi una verità. Per assicurarmi il successo del piano non siete stati gli unici ad essere
+                    stati ingaggiati. Ma questa volta dovete essere tra gli ultimi...
+                </span>
+            </div>
+        </div>
+
+        <div class="reply-area">
+            <input type="text" id="chiave_livello" placeholder="Scrivi il codice...">
+            <button onclick="checkAnswers('livello16')" class="send-btn">➤</button>
+        </div>
+
+        <div id="error" style="color: red; font-weight: bold; margin-top: 10px;"></div>
+        <div id="timer-display" style="margin-top: 5px; color: yellow;"></div>
+        <div id="hint-display" style="font-weight: bold; margin-top: 5px; color: blue;"></div> 
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a; /* Colore di base scuro */
+    font-family: 'Montserrat', sans-serif;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+/* L'immagine di sfondo in trasparenza */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    /* MODIFICA QUESTA RIGA INSERENDO IL NOME DEL FILE */
+    background-image: url('sfondo_piano.png');
+    
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    opacity: 0.15; 
+    filter: grayscale(30%) contrast(120%) brightness(80%);
+    z-index: -1;
+}
+/* --- Il resto del codice (container, bottoni, input) rimane uguale a prima --- */
+
+.container {
+    background-color: rgba(18, 18, 18, 0.85); /* Leggermente trasparente per far intravedere lo sfondo */
+    border: 2px solid #b30000;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(179, 0, 0, 0.3);
+    max-width: 750px;
+    padding: 40px;
+    position: relative;
+    text-align: justify;
+    line-height: 1.7;
+    backdrop-filter: blur(5px); /* Effetto vetro sfocato modernissimo (opzionale) */
+}
+
+/* ... continua con h1, h2, input, button ecc. ... */
+
+/* Stile terminale per i titoli */
+h1, h2 {
+    font-family: 'Share Tech Mono', monospace;
+    color: #ff3333;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.5rem; margin-top: 20px; }
+
+p {
+    font-size: 1.05rem;
+    margin-bottom: 1.2em;
+    color: #cccccc;
+}
+
+/* Evidenziazioni in rosso */
+b, strong {
+    color: #ff4d4d;
+}
+
+/* Liste del briefing */
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #bfbfbf;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Input stile hacker */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0 25px 0;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-family: 'Share Tech Mono', monospace;
+    background-color: #000;
+    color: #ff3333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #b30000;
+    box-shadow: 0 0 10px rgba(179, 0, 0, 0.5);
+}
+
+/* Bottone di invio */
+button {
+    background-color: #b30000;
+    color: #ffffff;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.1s;
+    display: block;
+    margin: 0 auto;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.02);
+}
+
+button:disabled {
+    background-color: #404040;
+    color: #808080;
+    cursor: not-allowed;
+}
+
+.error {
+    color: #ff3333;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+#timer {
+    text-align: center;
+    display: block;
+    color: #ff9999;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* =========================================
+   REGOLE PER GLI SCHERMI DEI TELEFONI
+   ========================================= */
+/* Stile Notifica Messaggio */
+.message-bubble {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    background: #ffffff;
+    padding: 12px 18px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15); /* Ombra iOS-style */
+    border: 0.5px solid rgba(0,0,0,0.05);
+    max-width: 360px;
+}
+
+.icon-bubble {
+    width: 40px;
+    height: 40px;
+    background: #25D366;
+    border-radius: 10px; /* Più squadrato, stile iOS */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+}
+
+.bubble-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Messaggio inviato (stile WhatsApp - Allineato a destra) --- */
+.message-bubble-sent {
+    display: flex;
+    justify-content: flex-end; /* Allinea tutto a destra */
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.bubble-sent {
+    background: #DCF8C6; /* Verde tipico WhatsApp */
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 15px 15px 0px 15px; /* Angoli arrotondati, punta in basso a destra */
+    max-width: 80%;
+    position: relative;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left; /* Il testo resta leggibile a sinistra nel fumetto */
+}
+
+/* Opzionale: Aggiunge una piccola freccetta al fumetto */
+.bubble-sent::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #DCF8C6;
+    border-right: 10px solid transparent;
+}
+
+.sender { 
+    font-size: 13px; 
+    font-weight: 600; 
+    color: #000; 
+    margin-bottom: 2px; 
+}
+
+.message-text { 
+    font-size: 14px; 
+    color: #333; 
+}
+
+/* Casella di Risposta */
+.reply-area {
+    background: #ffffff;
+    padding: 12px 20px;
+    border-radius: 20px; /* Più tondeggiante */
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.05);
+    max-width: 360px;
+}
+
+.reply-area input {
+    border: none;
+    background: transparent;
+    flex-grow: 1;
+    font-size: 15px;
+    color: #000;
+    outline: none;
+}
+
+/* Stile del tasto triangolino */
+.send-btn {
+    background: transparent;
+    color: #007AFF; /* Colore blu iOS */
+    border: none;
+    font-size: 20px; /* Dimensione del triangolino */
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.send-btn:active {
+    transform: scale(0.9); /* Effetto pressione */
+}
+
+/* Nascondiamo l'errore di default */
+#error-message {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+/* Impedisce la selezione del testo in tutta la pagina */
+body {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+    user-select: none;         /* Standard */
+    -webkit-touch-callout: none; /* Impedisce il menu contestuale su iOS */
+}
+
+/* Stile per rendere il player audio più compatto e integrato */
+.custom-audio {
+    height: 35px;
+    width: 200px; /* Imposta la larghezza che preferisci */
+    filter: invert(0) hue-rotate(0deg); /* Se hai bisogno di cambiare i colori (sperimenta con i valori) */
+    outline: none;
+}
+
+/* Opzionale: Se vuoi un look ancora più pulito, 
+   puoi personalizzare i colori dei controlli (funziona principalmente su Chrome/Edge/Safari) */
+.custom-audio::-webkit-media-controls-panel {
+    background-color: #f0f0f0;
+}
+
+.start-button {
+    background-color: #b30000;
+    color: #ffffff;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    max-width: 250px;
+    margin: 20px auto 0 auto;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+.start-button:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.02);
+}

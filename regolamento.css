@@ -1,0 +1,64 @@
+body.light-theme {
+    /* Gradiente molto leggero per dare profondità */
+    background: linear-gradient(135deg, #fdfdfd 0%, #f0f2f5 100%);
+    font-family: 'Inter', -apple-system, sans-serif; /* Font più moderno */
+    color: #2d3436;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container-light {
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 20px; /* Bordi più arrotondati per un look premium */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Ombra diffusa e leggera */
+    max-width: 600px;
+    border: 1px solid #e1e8ed;
+}
+
+h1 {
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+/* Stile per i checkbox e input più curati */
+.checkbox-container {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Bottone con stile moderno */
+button {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
