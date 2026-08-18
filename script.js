@@ -6,8 +6,8 @@ const CONFIG_LIVELLI = {
     risposte: { chiave_livello: "859317" },
     indizi: [
       "dove potete trovare le notizie?",
-      "un indizio è nel nostro mese",
-      "avete dimezzato il giornale?",
+      "un indizio è nelle stelle del nostro mese",
+      "avete diviso la verità per far combaciare le stranezze?",
       "dove cammina il treno?",
       "doppio bianco è spazio",
       "nero sopra bianco sotto -> 1",
@@ -31,7 +31,7 @@ const CONFIG_LIVELLI = {
     indizi: [
       "Assicuratevi che siano tutti e due",
       "sono di più dei gatti di una canzone",
-      "sono di più dei gatti di una canzone",
+      "sono meno dei ",
       "sono di più dei gatti di una canzone",
       "sono di meno dei "
     ],
@@ -41,13 +41,15 @@ const CONFIG_LIVELLI = {
   livello4: {
     risposte: { chiave_livello: "59863120" },
     indizi: [
+      "non ancora, concentratevi...",
+      "dovete penare ancora un po' per avere il primo indizio...",
       "stella rossa = 8",
       "esplosione = 6",
       "quadrato con punto rosso = 1",
       "stella bianca nel cerchio blu = 9"
     ],
-    tempoBloccoMs: 20 * secondi,
-    erroriPerIndizio: 10
+    tempoBloccoMs: 120 * secondi,
+    erroriPerIndizio: 2
   },
   livello5: {
     risposte: { chiave_livello: "cooperativa" },
@@ -259,7 +261,7 @@ function checkAnswers(livello) {
     const blockUntil = Date.now() + config.tempoBloccoMs;
     localStorage.setItem(livello + "_blockUntil", blockUntil);
 
-    errorEl.textContent = "!!! CODICE ERRATO !!!";
+    errorEl.textContent = "!!! RISPOSTA ERRATA !!!";
     startTimer(livello);
   }
 }
