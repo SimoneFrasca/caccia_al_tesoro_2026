@@ -381,7 +381,7 @@ function checkAlarm(livello) {
     feedbackHTML += "</div>";
 
     errorEl.dataset.alarmError = "true";
-    errorEl.innerHTML = "!!! CODICE ERRATO - 10 SECONDI DI PENALITÀ !!!" + feedbackHTML;
+    errorEl.innerHTML = "!!! SEQUENZA ERRATA !!!" + feedbackHTML;
 
     let totalErrors = parseInt(localStorage.getItem(livello + "_totalErrorCount") || "0") + 1;
     localStorage.setItem(livello + "_totalErrorCount", totalErrors);
