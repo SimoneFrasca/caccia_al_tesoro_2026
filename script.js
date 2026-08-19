@@ -121,7 +121,7 @@ const CONFIG_LIVELLI = {
     tempoBloccoMs: 10 * secondi
   },
   livello12: {
-    risposte: { chiave_livello: "24" },
+    risposte: { chiave_livello: "56" },
     indizi: [],
     tempoBloccoMs: 10 * secondi
   },
