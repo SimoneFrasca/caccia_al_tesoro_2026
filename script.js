@@ -68,7 +68,7 @@ const CONFIG_LIVELLI = {
   livello7: {
     risposte: { chiave_livello: "Leonardo da Vinci" },
     indizi: [
-      { nome: " > qual è la cadenza dei balli?", tempoAttesaMs: 10 * minuti },
+      { nome: " > qual è la cadenza dei balli?", tempoAttesaMs: 15 * minuti },
       { nome: " > Y->U", tempoAttesaMs: 10 * minuti },
       { nome: " > W->T", tempoAttesaMs: 8 * minuti },
       { nome: " > vale per tutti i pari e dispari", tempoAttesaMs: 7 * minuti },
@@ -81,7 +81,7 @@ const CONFIG_LIVELLI = {
   livello8: {
     risposte: { chiave_livello: "olio su tela" },
     indizi: [
-      { nome: " > avete fatto bene i conti?", tempoAttesaMs: 10 * minuti },
+      { nome: " > avete fatto bene i conti?", tempoAttesaMs: 15 * minuti },
       { nome: " > occhio all'indizio", tempoAttesaMs: 10 * minuti },
       { nome: " > ci interessano tante cifre quante sono le torri di Notre Dame", tempoAttesaMs: 10 * minuti },
       { nome: " > attenti all'ordine", tempoAttesaMs: 5 * minuti },
@@ -94,7 +94,7 @@ const CONFIG_LIVELLI = {
   livello9: {
     risposte: { chiave_livello: "591700" },
     indizi: [
-      { nome: " > siete arrivati al termine dell'operazione?", tempoAttesaMs: 10 * minuti },
+      { nome: " > siete arrivati al termine dell'operazione?", tempoAttesaMs: 15 * minuti },
       { nome: " > di un'opera d'arte, quale operazione potete fare con due numeri?", tempoAttesaMs: 10 * minuti },
       { nome: " > quali sono le dimensioni dell'opera?", tempoAttesaMs: 6 * minuti },
       { nome: " > le avete moltiplicate?", tempoAttesaMs: 5 * minuti }
