@@ -60,8 +60,8 @@ const CONFIG_LIVELLI = {
     risposte: { chiave_livello: "la libertà che guida il popolo" },
     indizi: [
       { nome: " > fate attenzione alla richiesta... cosa viene chiesto per prima?", tempoAttesaMs: 10 * minuti },
-      { nome: " > avete trovato il titolo dell'opera (in italiano)?", tempoAttesaMs: 5 * minuti },
-      { nome: " > bisogna inserire il titolo dell'opera", tempoAttesaMs: 5 * minuti }
+      { nome: " > avete trovato il titolo dell'opera (in italiano)?", tempoAttesaMs: 10 * minuti },
+      { nome: " > bisogna inserire il titolo dell'opera", tempoAttesaMs: 10 * minuti }
     ],
     tempoBloccoMs: 30 * secondi
   },
@@ -111,13 +111,13 @@ const CONFIG_LIVELLI = {
     indizi: [
       { nome: " > la mappa è un po' troppo vuota... servirebbero dei numeri in quelle caselle", tempoAttesaMs: 10 * minuti },
       { nome: " > sapete, anche Parigi ha i suoi quartieri", tempoAttesaMs: 6 * minuti },
-      { nome: " > avete notato un particolare in ogni foto?", tempoAttesaMs: 4 * minuti },
-      { nome: " > l'avete vista in giro per Affile?", tempoAttesaMs: 4 * minuti },
-      { nome: " > ad ogni monumento un <i>arrondissement</i>", tempoAttesaMs: 4 * minuti },
-      { nome: " > attenzione, l'ordine è fondamentale", tempoAttesaMs: 4 * minuti },
-      { nome: " > il codice è dato dall'ordine dei quartieri che trovete sulla bici", tempoAttesaMs: 4 * minuti },
-      { nome: " > la foto 8 è la Tour Eiffel che si trova nel 7° arrondissement. Se la prima cifra segnata sulla bici è 8 (corrispondente alla foto 8), vuol dire che in prima posizione del codice va inserto il 7", tempoAttesaMs: 4 * minuti },
-      { nome: " > la foto 3 è l'Arc du Triomphe che si trova nell'8° arrondissement. Se la quarta cifra segnata sulla bici è 3 (corrispondente alla foto 3), vuol dire che in quarta posizione del codice va inserto l'8", tempoAttesaMs: 4 * minuti }
+      { nome: " > avete notato un particolare in ogni foto?", tempoAttesaMs: 6 * minuti },
+      { nome: " > l'avete vista in giro per Affile?", tempoAttesaMs: 6 * minuti },
+      { nome: " > ad ogni monumento un <i>arrondissement</i>", tempoAttesaMs: 6 * minuti },
+      { nome: " > attenzione, l'ordine è fondamentale", tempoAttesaMs: 6 * minuti },
+      { nome: " > il codice è dato dall'ordine dei quartieri che trovete sulla bici", tempoAttesaMs: 6 * minuti },
+      { nome: " > la foto 8 è la Tour Eiffel che si trova nel 7° arrondissement. Se la prima cifra segnata sulla bici è 8 (corrispondente alla foto 8), vuol dire che in prima posizione del codice va inserto il 7", tempoAttesaMs: 6 * minuti },
+      { nome: " > la foto 3 è l'Arc du Triomphe che si trova nell'8° arrondissement. Se la quarta cifra segnata sulla bici è 3 (corrispondente alla foto 3), vuol dire che in quarta posizione del codice va inserto l'8", tempoAttesaMs: 6 * minuti }
     ],
     tempoBloccoMs: 60 * secondi
   },
@@ -129,22 +129,23 @@ const CONFIG_LIVELLI = {
   livello13: {
     risposte: { chiave_livello: "Rue Brezin" },
     indizi: [
-      { nome: " > si trova nel 14° arrondissement", tempoAttesaMs: 5 * minuti },
-      { nome: " > non è una via principale", tempoAttesaMs: 5 * minuti },
-      { nome: " > è vicino ad una fermata delle metropolitana", tempoAttesaMs: 5 * minuti },
-      { nome: " > è una traversa tra due vie principali", tempoAttesaMs: 5 * minuti },
-      { nome: " > è vicina ad un parco", tempoAttesaMs: 5 * minuti },
-      { nome: " > la via è intitolata ad una persona sepolta al cimitero di Père Lachaise", tempoAttesaMs: 5 * minuti },
-      { nome: " > la via inizia con la lettera B", tempoAttesaMs: 5 * minuti },
-      { nome: " > questa persona era un imprenditore e industriale che visse tra il '700 e l'800", tempoAttesaMs: 5 * minuti },
-      { nome: " > la via termina con la lettera N", tempoAttesaMs: 5 * minuti },
+      { nome: " > si trova nel 14° arrondissement", tempoAttesaMs: 7 * minuti },
+      { nome: " > non è una via principale", tempoAttesaMs: 7 * minuti },
+      { nome: " > è vicino ad una fermata delle metropolitana", tempoAttesaMs: 7 * minuti },
+      { nome: " > è una traversa tra due vie principali", tempoAttesaMs: 7 * minuti },
+      { nome: " > è vicina ad un parco", tempoAttesaMs: 7 * minuti },
+      { nome: " > la via è intitolata ad una persona sepolta al cimitero di Père Lachaise", tempoAttesaMs: 7 * minuti },
+      { nome: " > la via inizia con la lettera B", tempoAttesaMs: 7 * minuti },
+      { nome: " > questa persona era un imprenditore e industriale che visse tra il '700 e l'800", tempoAttesaMs: 7 * minuti },
+      { nome: " > la via termina con la lettera N", tempoAttesaMs: 7 * minuti },
+      { nome: " > la chiave è a: rue B....n", tempoAttesaMs: 7 * minuti },
     ],
     tempoBloccoMs: 60 * secondi
   },
   livello14: {
     risposte: { chiave_livello: "4729" }, 
     indizi: [],
-    tempoBloccoMs: 60 * secondi
+    tempoBloccoMs: 30 * secondi
   },
   livello15: {
     risposte: { chiave_livello: "1110326451311412798" }, 
