@@ -148,7 +148,7 @@ const CONFIG_LIVELLI = {
     tempoBloccoMs: 30 * secondi
   },
   livello15: {
-    risposte: { chiave_livello: "1110326451311412798" }, 
+    risposte: { chiave_livello: "1110326541311412798" }, 
     indizi: [
       { nome: " > non facciamo il bis (non contate le linee bis)", tempoAttesaMs: 10 * minuti },
       { nome: " > partiamo dalla linea 11", tempoAttesaMs: 10 * minuti },
