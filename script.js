@@ -15,7 +15,7 @@ const CONFIG_LIVELLI = {
       { nome: " > 6 cifre", tempoAttesaMs: 5 * minuti },
       { nome: " > prima e ultima cifra: 8 e 7", tempoAttesaMs: 5 * minuti },
       { nome: " > terza e quarta cifra: 9 e 3", tempoAttesaMs: 5 * minuti },
-      { nome: " > seconda e quinta cifra: 5 e 1", tempoAttesaMs: 5 * minuti }
+      { nome: " > seconda e quinta cifra: 5 e 1", tempoAttesaMs: 20 * minuti }
     ],
     tempoBloccoMs: 30 * secondi
   },
