@@ -23,15 +23,15 @@ const CONFIG_LIVELLI = {
     risposte: { chiave_livello: "bottino" },
     indizi: [
       { nome: " > come si chiama la refurtiva dopo un colpo?", tempoAttesaMs: 10 * minuti },
-      { nome: " > è anche una zona di Affile", tempoAttesaMs: 5 * minuti }
+      { nome: " > è anche una zona in alto di Affile", tempoAttesaMs: 5 * minuti }
     ],
     tempoBloccoMs: 30 * secondi
   },
   livello3: {
     risposte: { chiave_livello: "50" },
     indizi: [
-      { nome: " > Assicuratevi che sia la prima", tempoAttesaMs: 5 * minuti },
-      { nome: " > Assicuratevi di contare sulla piastra", tempoAttesaMs: 5 * minuti },
+      { nome: " > assicuratevi che sia la prima", tempoAttesaMs: 5 * minuti },
+      { nome: " > assicuratevi di contare sulla piastra e ai lati", tempoAttesaMs: 5 * minuti },
       { nome: " > sono di più dei gatti di una canzone", tempoAttesaMs: 3 * minuti },
       { nome: " > sono meno della metà di 110", tempoAttesaMs: 3 * minuti },
       { nome: " > sono di più di 6x8", tempoAttesaMs: 3 * minuti },
